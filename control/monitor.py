@@ -50,6 +50,7 @@ def analyze_data():
 
         if alert:
             message = "ALERT {} {} {}".format(variable, min_value, max_value)
+            print(message, "Este es el mensaje de alerta")
             topic = '{}/{}/{}/{}/in'.format(country, state, city, user)
             print(datetime.now(), "Sending alert to {} {}".format(topic, variable))
             client.publish(topic, message)
