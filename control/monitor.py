@@ -44,6 +44,9 @@ def analyze_data():
         state = item['station__location__state__name']
         city = item['station__location__city__name']
         user = item['station__user__username']
+        print (item["check_value"])
+        print (max_value)
+        print (min_value)
 
         if item["check_value"] > max_value or item["check_value"] < min_value:
             alert = True
